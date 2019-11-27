@@ -15,8 +15,14 @@ header
 {
 	background-image: url(/home/ann1/michelm/projet/images/foret.jpg);
 	background-repeat: no-repeat;
-	background-attachment: static;
+	background-attachment: fixed;
+	background-size: cover;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: flex;
 }
 
 h1
