@@ -1,0 +1,183 @@
+@font-face {
+    font-family: WildNature;
+    src: url(/home/ann1/michelm/projet/Font/WildNature.ttf);
+}
+
+@font-face
+{
+    font-family: Thanksyou;
+    src: url(/home/ann1/michelm/projet/Font/ty.ttf);
+}
+
+body
+{
+	color: white;
+	background-color: black;
+	word-wrap: break-word;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden !important;
+	overflow-y: auto;
+
+}
+
+header
+{
+	background-image: url(/home/ann1/michelm/projet/images/foret.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: flex;
+}
+
+h1
+{
+	margin: 0;
+	font-family: WildNature;
+	font-size: 750%;
+	text-align: center;
+}
+
+h4
+{
+	margin: 0.5%;
+	font-size: 175%;
+	font-family: Thanksyou;
+}
+
+.snow__layer
+{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	left: -100px;
+	right: -100px;
+	animation: wind-1 5s linear infinite alternate;
+	perspective: 100px;
+}
+
+.snow__layer::before
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	background: url(/home/ann1/michelm/projet/images/feuilles.png);
+	opacity: 0.3;
+	animation: fall-2 10s linear infinite;
+	transform: translateZ(50px);
+}
+
+.snow__layer::after
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	background: url(/home/ann1/michelm/projet/images/feuilles.png);
+	opacity: 0.3;
+	animation: fall-1 10s linear infinite;
+	transform: translateZ(50px);
+}
+
+.snow__laye
+{
+	top: 50vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	left: -100px;
+	right: -100px;
+	animation: wind-2 5s linear infinite alternate;
+	perspective: 100px;
+}
+
+.snow__laye::before
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	background: url(/home/ann1/michelm/projet/images/ff.png);
+	opacity: 0.2;
+	animation: fall-2 10s linear infinite;
+	transform: translateZ(50px);
+}
+
+.snow__laye::after
+{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	background: url(/home/ann1/michelm/projet/images/ff.png);
+	opacity: 0.2;
+	animation: fall-1 10s linear infinite;
+	transform: translateZ(50px);
+}
+
+
+@keyframes fall-1
+{
+	from
+	{
+		transform: translateY(0px);
+	}
+	to
+	{
+		transform: translateY(100vh);
+	}
+}
+
+@keyframes fall-2
+{
+	from
+	{
+		transform: translateY(-100vh);
+	}
+	to
+	{
+		transform: translateY(0px);
+	}
+}
+
+@keyframes wind-1
+{
+	to
+	{
+		transform: translateX(150px);
+	}
+}
+
+
+@keyframes wind-2
+{
+	to
+	{
+		transform: translateX(-150px);
+	}
+}
+
+
+
+
