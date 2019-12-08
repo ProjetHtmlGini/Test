@@ -1,12 +1,12 @@
 @font-face {
     font-family: WildNature;
-    src: url(/home/ann1/michelm/projet/Font/WildNature.ttf);
+    src: url('../Font/WildNature.ttf');
 }
 
 @font-face
 {
     font-family: Thanksyou;
-    src: url(/home/ann1/michelm/projet/Font/ty.ttf);
+    src: url('../Font/ty.ttf');
 }
 
 body
@@ -25,16 +25,16 @@ body
 
 header
 {
-	background-image: url(/home/ann1/michelm/projet/images/foret.jpg);
+	background-image: url('../images/foret.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	min-height: 100%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	position: flex;
 }
 
 h1
@@ -43,6 +43,7 @@ h1
 	font-family: WildNature;
 	font-size: 750%;
 	text-align: center;
+	z-index: 2000;
 }
 
 h4
@@ -52,131 +53,112 @@ h4
 	font-family: Thanksyou;
 }
 
+.snow
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+
+}
+
 .snow__layer
 {
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
 	position: absolute;
 	left: -100px;
 	right: -100px;
-	animation: wind-1 5s linear infinite alternate;
+	animation: wind 1s cubic-bezier(0.51,0.01,0.63,0.99) infinite alternate;
 	perspective: 100px;
 }
 
-.snow__layer::before
+.snow__fall
 {
-	content:'';
+	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 1000px;
-	background: url(/home/ann1/michelm/projet/images/feuilles.png);
+	height: 2000px;
+	background: url('../images/1.png');
+	animation: fall 10s linear infinite;
+	opacity: 0.5;
+}
+
+.snow__layer:nth-child(1)
+{
+	animation-duration: 35s;
+	opacity: 0.7;
+}
+
+.snow__layer:nth-child(1) .snow__fall
+{
+	background: url('../images/2.png');
+	transform: translateZ(25px);
+	animation-name: fallblur;
+	background-size: 250px;
+}
+
+
+.snow__layer:nth-child(2) .snow__fall
+{
+	background: url('../images/3.png');
+	animation-timing-function: ease;
+}
+
+.snow__fall:nth-child(2)
+{
+	animation-duration: 10s;
+	background-size: 250px;
 	opacity: 0.3;
-	animation: fall-2 10s linear infinite;
-	transform: translateZ(50px);
 }
 
-.snow__layer::after
+.snow__fall:nth-child(2)
 {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 1000px;
-	background: url(/home/ann1/michelm/projet/images/feuilles.png);
-	opacity: 0.3;
-	animation: fall-1 10s linear infinite;
-	transform: translateZ(50px);
+	animation-duration: 20s;
+	background-size: 500px;
 }
 
-.snow__laye
+.snow__layer:nth-child(4) .snow_fall
 {
-	top: 50vh;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	position: absolute;
-	left: -100px;
-	right: -100px;
-	animation: wind-2 5s linear infinite alternate;
-	perspective: 100px;
-}
-
-.snow__laye::before
-{
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 1000px;
-	background: url(/home/ann1/michelm/projet/images/ff.png);
-	opacity: 0.2;
-	animation: fall-2 10s linear infinite;
+	animation-duration: 5s;
 	transform: translateZ(50px);
+	animation-name: falllight;
 }
 
-.snow__laye::after
-{
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 1000px;
-	background: url(/home/ann1/michelm/projet/images/ff.png);
-	opacity: 0.2;
-	animation: fall-1 10s linear infinite;
-	transform: translateZ(50px);
-}
-
-
-@keyframes fall-1
+@keyframes fall
 {
 	from
 	{
-		transform: translateY(0px);
-	}
-	to
-	{
-		transform: translateY(100vh);
+		transform: translateY(-1000px);
 	}
 }
 
-@keyframes fall-2
+@keyframes falllight
 {
 	from
 	{
-		transform: translateY(-100vh);
-	}
-	to
-	{
-		transform: translateY(0px);
+		transform: translateY(-1000px) translateZ(50px);
 	}
 }
 
-@keyframes wind-1
+@keyframes fallblur
+{
+	from
+	{
+		transform: translateY(-1000px) translateZ(25px);
+	}
+}
+
+@keyframes wind
 {
 	to
 	{
-		transform: translateX(150px);
+		transform: translateX(50px);
 	}
 }
 
-
-@keyframes wind-2
-{
-	to
-	{
-		transform: translateX(-150px);
-	}
-}
 
 
 
