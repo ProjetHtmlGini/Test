@@ -362,3 +362,102 @@ a
 {
 	text-decoration: none;
 }
+
+
+main
+{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main .container
+{
+  position: relative;
+  height: auto;
+  width: 50%;
+  margin: auto auto;
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vh;
+  grid-auto-flow: dense;
+  text-align: center;
+
+}
+
+main .container .Box
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 20px;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container .Box:nth-child(1)
+{
+  grid-row-start: span 2;
+}
+
+main .container .Box:nth-child(2)
+{
+  grid-column-start: span 2;
+}
+
+main .container .Box:nth-child(4)
+{
+  grid-row-start: span 2;
+}
+
+main .container .Box:nth-child(5)
+{
+  grid-column-start: span 2;
+}
+
+@media only screen and (max-width: 768px)
+{
+  main .container
+  {
+    display: block;
+    width: 90%;
+    height: 10%;
+  }
+
+  .Box
+  {
+    margin: 10% auto;
+  }
+
+  main
+  {
+  	display: block;
+  }
+
+}
+
+.Box img
+{
+	overflow: hidden;
+	border: 1px solid white;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	background-color: #fff;
+	margin: 10% auto;
+	opacity: 1;
+	transition-duration: .3s;
+}
+
+.Box:nth-child(n):hover img
+{
+	opacity: 0;
+	transition-duration: .3s;
+}
