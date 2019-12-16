@@ -394,7 +394,7 @@ main .container .Box
   height: 20vh;
   width: 100%;
   overflow: hidden;
-  border: 4px solid white;
+  border: 4px solid #412200;
   border-radius: 20px;
   word-wrap: break-word;
   display: flex;
@@ -406,22 +406,32 @@ main .container .Box:nth-child(1)
 {
   grid-row-start: span 2;
   height: 43vh;
+  background-color: #FDA637;
 }
 
 main .container .Box:nth-child(2)
 {
   grid-column-start: span 2;
+  background-color: #B63F3F;
 }
 
 main .container .Box:nth-child(4)
 {
   grid-row-start: span 2;
   height: 43vh;
+  background-color: #FFA137;
 }
 
 main .container .Box:nth-child(5)
 {
   grid-column-start: span 2;
+  background-color: #704413;
+}
+
+main .container .Box:nth-child(3)
+{
+  background-color: #8BC739;
+  opacity: .75;
 }
 
 @media only screen and (max-width: 768px)
@@ -445,7 +455,7 @@ main .container .Box:nth-child(5)
 
   main .container .Box:nth-child(4)
   {
-    height: 20vh;
+    height: 20vh; 
   }
 
   main
@@ -462,27 +472,50 @@ main .container .Box:nth-child(5)
 	border-radius: 50%;
 	width: 90px;
 	height: 90px;
-	background-color: #fff;
+	background-color: #412200;
 	margin: 10% auto;
-	display: inherit;
-
+	position: absolute;
+  transition-duration: .2s;
 }
 
 .Box p
 {
-  display: none;
+  position: absolute;
   opacity: 0;
   transition-duration: .3s;
+  color: black;
 }
 
 .Box:nth-child(n):hover img
 {
-	display: none;
+	opacity: 0;
+  transition-duration: .2s;
 }
 
 .Box:nth-child(n):hover p
 {
-  display: inherit;
   opacity: 1;
   transition-duration: .3s;
+}
+
+
+main
+{
+  background: white   ;
+}
+
+.transition
+{
+  display: block;
+  border: 2px solid  #412200 ;
+
+}
+
+footer
+{
+  height: 250px;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
 }
