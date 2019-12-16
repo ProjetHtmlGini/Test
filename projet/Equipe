@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<title>Équipe - Potager Autonome </title>
+        <link rel="stylesheet" type="text/css" href="styleEquipe.css">
+    </head>
+    <body>
+    	<div class="equipe">
+    		<div class="equipier">
+    			<figure id="fig-matteo">
+				    <img class="image-equipe" src=""
+				         alt="si tu vois ca c'est que ya pas l image">
+				    <figcaption class="text-image">Le boss</figcaption>
+				</figure>
+    		</div>
+    		<div class="equipier">
+    			<figure id="fig-paul">
+				    <img class="image-equipe" src="test.png"
+				         alt="si tu vois ca c'est que ya pas l image">
+				    <figcaption class="text-image">le branleur</figcaption>
+				</figure>
+    		</div>
+    		<div class="equipier">
+    			<figure id="fig-lucas">
+				    <img class="image-equipe" src=""
+				         alt="si tu vois ca c'est que ya pas l image">
+				    <figcaption class="text-image">le dormeur</figcaption>
+				</figure>
+    		</div>
+    		<div class="equipier">
+    			<figure id="fig-julien">
+				    <img class="image-equipe" src=""
+				         alt="si tu vois ca c'est que ya pas l image">
+				    <figcaption class="text-image">Le gros branleur</figcaption>
+				</figure>
+    		</div>
+    	</div>
+	</body>
+</html>
+
+
+
+
