@@ -21,6 +21,12 @@
   src: url('../Font/Boizenburg.ttf');
 }
 
+@font-face
+{
+  font-family: MellaNissa;
+  src: url('../Font/BlackGround.ttf');
+}
+
 body
 {
 	color: white;
@@ -440,7 +446,7 @@ main .container .Box:nth-child(3)
   background-color: rgba(139, 199,57,.66);
 }
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 653px)
 {
   main .container
   {
@@ -467,8 +473,31 @@ main .container .Box:nth-child(3)
   main
   {
   	display: block;
+    height: 150vh;
   }
 
+  main > h2
+  {
+    display: none;
+  }
+
+  header .mouseLayout
+  {
+    display: none;
+  }
+
+  #wrap:target
+  {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 479px)
+{
+  body
+  {
+    display: none;
+  }
 }
 
 .Box img
@@ -478,7 +507,7 @@ main .container .Box:nth-child(3)
 	width: 90px;
 	height: 90px;
 	background-color: #412200;
-	margin: 10% auto;
+	margin: 0 auto;
 	position: absolute;
   transition-duration: .2s;
 }
@@ -542,6 +571,10 @@ main .container .Box:nth-child(3)
   transition-duration: .3s;
 }
 
+.Box:nth-child(n):hover
+{
+  border: 4px solid rgba(255,255,255, .5);
+}
 
 main
 {
@@ -562,4 +595,27 @@ footer
   bottom: 0;
   width: 100%;
   background-color: black;
+}
+
+main > h2
+{
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  color: hsl(324, 70%, 45%);
+  animation: wheelHueColor 10s infinite;
+  font-family: MellaNissa;
+}
+
+@keyframes wheelHueColor {
+    from, to { color: hsl(324, 70%, 45%); }
+    10%      { color: hsl(360, 65%, 45%); }
+    20%      { color: hsl( 36, 80%, 45%); }
+    30%      { color: hsl( 72, 75%, 35%); }
+    40%      { color: hsl(108, 65%, 35%); }
+    50%      { color: hsl(144, 75%, 35%); }
+    60%      { color: hsl(180, 75%, 35%); }
+    70%      { color: hsl(216, 60%, 45%); }
+    80%      { color: hsl(252, 65%, 50%); }
+    90%      { color: hsl(288, 60%, 40%); }
 }
