@@ -15,6 +15,12 @@
 	src: url('../Font/NameSmile.otf');
 }
 
+@font-face
+{
+  font-family: Boizenburg;
+  src: url('../Font/Boizenburg.ttf');
+}
+
 body
 {
 	color: white;
@@ -406,32 +412,32 @@ main .container .Box:nth-child(1)
 {
   grid-row-start: span 2;
   height: 43vh;
-  background-color: #FDA637;
+  background-color: rgba(253,166,55,.66);
+
 }
 
 main .container .Box:nth-child(2)
 {
   grid-column-start: span 2;
-  background-color: #B63F3F;
+  background-color: rgba(182,63,63,.66);
 }
 
 main .container .Box:nth-child(4)
 {
   grid-row-start: span 2;
   height: 43vh;
-  background-color: #FFA137;
+  background-color: rgba(255,61,55,.66);
 }
 
 main .container .Box:nth-child(5)
 {
   grid-column-start: span 2;
-  background-color: #704413;
+  background-color: rgba(112,68,19,.66);
 }
 
 main .container .Box:nth-child(3)
 {
-  background-color: #8BC739;
-  opacity: .75;
+  background-color: rgba(139, 199,57,.66);
 }
 
 @media only screen and (max-width: 768px)
@@ -468,7 +474,6 @@ main .container .Box:nth-child(3)
 .Box img
 {
 	overflow: hidden;
-	border: 1px solid white;
 	border-radius: 50%;
 	width: 90px;
 	height: 90px;
@@ -478,12 +483,51 @@ main .container .Box:nth-child(3)
   transition-duration: .2s;
 }
 
-.Box p
+.Box .Paragraphe
 {
-  position: absolute;
   opacity: 0;
   transition-duration: .3s;
   color: black;
+  height: 100%;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+}
+
+.Box .ParagrapheBis p
+{
+  text-align: justify;
+  margin: 0 10px;
+}
+
+.Box .ParagrapheBis h3
+{
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%; 
+  font-family: Boizenburg;
+  font-size: 150%;
+}
+
+.Box .ParagrapheBis
+{
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.Box .Paragraphe h3
+{
+  top: 10px;
+  position: absolute;
+  top: 0;
+  font-family: Boizenburg;
+  font-size: 150%;
+}
+
+.Box .Paragraphe p
+{
+  position: relative;
+  margin: 35% 10px 0;
 }
 
 .Box:nth-child(n):hover img
@@ -492,7 +536,7 @@ main .container .Box:nth-child(3)
   transition-duration: .2s;
 }
 
-.Box:nth-child(n):hover p
+.Box:nth-child(n):hover .Paragraphe, .Box:nth-child(n):hover .ParagrapheBis
 {
   opacity: 1;
   transition-duration: .3s;
