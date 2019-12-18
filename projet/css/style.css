@@ -406,7 +406,7 @@ main .container .Box
   height: 20vh;
   width: 100%;
   overflow: hidden;
-  border: 4px solid #412200;
+  border: 4px solid white;
   border-radius: 20px;
   word-wrap: break-word;
   display: flex;
@@ -418,35 +418,35 @@ main .container .Box:nth-child(1)
 {
   grid-row-start: span 2;
   height: 43vh;
-  background-color: rgba(253,166,55,.66);
+  background-color: rgba(238,200,0,.66);
 
 }
 
 main .container .Box:nth-child(2)
 {
   grid-column-start: span 2;
-  background-color: rgba(182,63,63,.66);
+  background-color: rgba(125,83,0,.66);
 }
 
 main .container .Box:nth-child(4)
 {
   grid-row-start: span 2;
   height: 43vh;
-  background-color: rgba(255,61,55,.66);
+  background-color: rgba(255,127,0,.66);
 }
 
 main .container .Box:nth-child(5)
 {
   grid-column-start: span 2;
-  background-color: rgba(112,68,19,.66);
+  background-color: rgba(71,47,0,.66);
 }
 
 main .container .Box:nth-child(3)
 {
-  background-color: rgba(139, 199,57,.66);
+  background-color: rgba(32, 167,0,.66);
 }
 
-@media only screen and (max-width: 653px)
+@media only screen and (max-width: 1000px)
 {
   main .container
   {
@@ -457,7 +457,7 @@ main .container .Box:nth-child(3)
 
   .Box
   {
-    margin: 10% auto;
+    margin: 5% auto;
   }
 
   main .container .Box:nth-child(1)
@@ -469,6 +469,19 @@ main .container .Box:nth-child(3)
   {
     height: 20vh; 
   }
+
+  main .container .Box:nth-child(4) p, main .container .Box:nth-child(1) p
+  {
+    height: 20vh; 
+    margin-top: 10%;
+  }
+
+  main .container .Box:nth-child(4) h3, main .container .Box:nth-child(1) h3
+  {
+    height: 20vh; 
+    margin-top: 2%;
+  }
+
 
   main
   {
@@ -492,13 +505,6 @@ main .container .Box:nth-child(3)
   }
 }
 
-@media only screen and (max-width: 479px)
-{
-  body
-  {
-    display: none;
-  }
-}
 
 .Box img
 {
@@ -511,6 +517,8 @@ main .container .Box:nth-child(3)
 	position: absolute;
   transition-duration: .2s;
 }
+
+
 
 .Box .Paragraphe
 {
