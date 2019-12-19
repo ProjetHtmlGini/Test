@@ -3,29 +3,40 @@
   padding: 0;
   font-family: "montserrat",sans-serif;
 }
-.contact-section{
-  background: url(../images/foret.jpg) no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  filter: grayscale(.3);
-  padding: 40px 0;
+
+body
+{
+  max-height: 100vh;
 }
+.contact-section{
+  height: 100vh;
+  float: right;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .contact-section h1{
-  text-align: center;
   color: #ddd;
+  position: absolute;
+  top: 1%;
 }
 .border{
   width: 100px;
   height: 10px;
   background: #34495e;
   margin: 40px auto;
+  position: absolute;
+  top: 2%;
 }
 
 .contact-form{
   max-width: 600px;
-  margin: auto;
   padding: 0 10px;
   overflow: hidden;
+  margin-top: 8%;
 }
 
 .contact-form-text{
@@ -76,3 +87,159 @@ label
 }
 
 
+header
+{
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  transform: skewX(-15deg);
+  transform-origin: top right;
+  border-right: 10px solid black;
+  overflow: hidden;
+
+}
+
+.header
+{
+  width: 100%;
+  height: 100%;
+  background: url('../images/foret.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform: skewX(15deg);
+  transform-origin: top right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 14%;
+}
+
+.nav > a:not(:first-child)
+{
+  opacity: 0;
+}
+
+
+.nav {
+  padding: 25px;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+
+
+.menu
+{
+  width: 75%;
+  max-height: 100vh;
+  text-align: center;
+}
+
+#wrap {
+  font-family: NameSmile;
+  font-size: 21px;
+  margin: 0;
+  display: flex;
+  color: #FFF;
+  transition: transform .5s cubic-bezier(.25, .1, .25, 1);
+  transform-origin: top left;
+  z-index: 500;
+}
+
+#wrap:not(:target) {
+  transform: translate3d(-34%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+
+
+#wrap:target .menu{
+  background-color: white;
+  max-height: 100vh;
+}
+
+
+#wrap:target .nav{
+  transform: skewX(15deg);
+}
+
+
+#open,
+#close {
+  height: 44px;
+  text-align: right;
+  display: block;
+  margin-right: -30px;
+}
+
+#wrap:target #open,
+#wrap:not(:target) #close {
+  display: none;
+}
+
+#wrap:target #open {
+  display: none;
+}
+
+
+#wrap:target {
+  transform: translate3d(0, 0, 0);
+  line-height: 8;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%; /* penser a augmenter pour le format telephone*/ 
+}
+
+#wrap:target .nav > a:not(:first-child)
+{
+  opacity: 1;
+  transition: all .2s ease-in 0s;
+}
+
+#wrap:target .nav > a:nth-child(3) {
+  transition-delay: .3s;
+}
+#wrap:target .nav > a:nth-child(4) {
+  transition-delay: .4s;
+}
+#wrap:target .nav > a:nth-child(5) {
+  transition-delay: .5s;
+}
+#wrap:target .nav > a:nth-child(6) {
+  transition-delay: .6s;
+}
+#wrap:target .nav > a:nth-child(7) {
+  transition-delay: .7s;
+}
+#wrap:target .nav > a:nth-child(8) {
+  transition-delay: .8s;
+}
+
+#wrap:target .nav > a:nth-child(1) {
+  height: 10%;
+}
+
+#close
+{
+  position: absolute;
+  top: 1%;
+}
+
+
+svg
+{
+  transform: skewX(15deg);
+}
