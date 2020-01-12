@@ -1,0 +1,171 @@
+@media only screen and (max-width: 992px)
+{
+  main .container
+  {
+    width: 60%;
+  }
+
+}
+
+@media only screen and (max-width: 768px)
+{
+ 
+  /* Page Index */ 
+
+  #wrap:target, #menuburger:target
+  {
+    width: 90%;
+  }
+
+  main .container
+  {
+    width: 75%;
+  }
+
+  header .mouseLayout
+  {
+    display: none;
+  }
+
+  /* Page Contact */
+
+  main .contact-section h1, main .border
+  {
+    top: 25vh;
+  }
+
+  .header, header
+  {
+    display: none;
+  }
+
+  .contact-section
+  {
+    float: inherit;
+    width: 100%;
+  }
+
+  section
+  {
+    display: inherit;
+    height: 20vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+
+  svg
+  {
+    transform: skewX(0deg);
+  }
+
+  .contact-form
+  {
+    margin-top: 0;
+  }
+
+  section h1
+  {
+    display: inherit;
+    color: white;
+    font-size: 300%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer
+  {
+    display: inherit;
+    height: 20vh;
+    background-color: black;
+  }
+}
+
+@media only screen and (max-width: 480px)
+{
+
+  /* Page Index */
+
+  main .container
+  {
+    display: block;
+    width: 90%;
+    height: 10%;
+  }
+
+  .Box
+  {
+    margin: 5% auto;
+  }
+
+  main .container .Box:nth-child(1), main .container .Box:nth-child(4)
+  {
+    height: 20vh;
+  }
+
+  main .container .Box:nth-child(4) p, main .container .Box:nth-child(1) p
+  {
+    height: 20vh; 
+    margin-top: 10%;
+  }
+
+  main .container .Box:nth-child(4) h3, main .container .Box:nth-child(1) h3
+  {
+    height: 20vh; 
+    margin-top: 2%;
+  }
+
+  main
+  {
+  	display: block;
+    height: 150vh;
+  }
+
+  main > h2, .feuilles, header h4
+  {
+    display: none;
+  }
+
+  header h1
+  {
+    font-size: 350%;
+  }
+
+  #wrap:target
+  {
+    width: 130%;
+  }
+
+  .Box img
+  {
+    height: 90px;
+    width: 90px;
+  }
+
+  .Box p
+  {
+    top: 20px;
+  }
+
+  /* page contact */ 
+
+  .contact-form
+  {
+    margin-top: 50vh;
+    width: 75%;
+  }
+
+  section h1
+  {
+    font-size: 150%;
+  }
+
+  #menuburger:target
+  {
+    width: 130%;
+  }
+
+
+}

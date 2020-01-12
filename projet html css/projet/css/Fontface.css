@@ -1,0 +1,28 @@
+@font-face {
+    font-family: WildNature;
+    src: url('../Font/WildNature.ttf');
+}
+
+@font-face
+{
+    font-family: Thanksyou;
+    src: url('../Font/ty.ttf');
+}
+
+@font-face
+{
+	font-family: NameSmile;
+	src: url('../Font/NameSmile.otf');
+}
+
+@font-face
+{
+  font-family: Boizenburg;
+  src: url('../Font/Boizenburg.ttf');
+}
+
+@font-face
+{
+  font-family: MellaNissa;
+  src: url('../Font/BlackGround.ttf');
+}
