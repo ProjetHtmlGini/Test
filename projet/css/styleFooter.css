@@ -1,0 +1,73 @@
+/* Bouton contact coloration taille et animation*/
+#bouton {
+	background-color:#000000;
+	border-radius:42px;
+	display: inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 30px;
+	text-decoration:none;
+}
+
+#bouton:hover {
+	background-color:#76b552;
+}
+
+/*				*/
+.footer-content
+{
+	background-color: #afb3b0;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	max-height: 250px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.footer-gauche,.footer-droit{
+ max-height: 250px;
+ margin: 50px 10px;
+}
+
+.social-icon > img {
+width: 24px;
+height: 24px;
+
+border-radius:15%;
+}
+.social-icon{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.footer-gauche>h2{
+	position: relative;
+	left: 34px;
+	margin-right: 0px;
+}
+
+#bouton{
+	position:relative;
+	left: 20%;
+}
+
+@media only screen and (max-width: 700px)
+{
+	.footer-content{
+		display: block;
+		text-align: center;
+		padding: 10px 0px;
+	}
+	#bouton{
+	position:initial;
+	}
+	.footer-gauche,.footer-droit{
+ 	margin: 0px;
+	}
+	.footer-gauche>h2{
+	position: initial;
+	}
+}
