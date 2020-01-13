@@ -75,6 +75,11 @@ a:visited
 {
 	color:white;
 }
+a:hover 
+{
+ color: rgba(32, 167,0,0.66);
+ transition-duration: 0.5s;
+}
 
 
 body{

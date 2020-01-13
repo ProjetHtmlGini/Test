@@ -14,7 +14,7 @@ body
 .border{
   width: 100px;
   height: 10px;
-  background: #34495e;
+  background: rgba(32, 167,0,0.66);
   margin: 40px auto;
   position: absolute;
   top: 2%;
@@ -40,7 +40,7 @@ section h1, .footer
 
 
 .contact-section h1{
-  color: #ddd;
+  color: rgba(0,0,0,0.75);
   position: absolute;
   top: 1%;
 }
@@ -70,12 +70,12 @@ section h1, .footer
 }
 textarea.contact-form-text{
   resize: none;
-  height: 120px;
+  height: 60px;
 }
 .contact-form-btn{
   float: right;
   border: 0;
-  background: #34495e;
+  background: #000;
   color: #fff;
   padding: 12px 50px;
   border-radius: 20px;
@@ -83,7 +83,7 @@ textarea.contact-form-text{
   transition: 0.5s;
 }
 .contact-form-btn:hover{
-  background: #2980b9;
+  background: rgba(32, 167,0,0.66);
 }
 
 input

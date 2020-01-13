@@ -1,66 +1,58 @@
 body{
 	margin: 0;
 }
-/*Grid */
-.equipe {
-display: grid;
-grid-template-columns: 0.8fr 2fr 0.5fr 2fr 0.8fr;
-grid-template-rows: 0.8fr 1fr 0.5fr 1fr 0.8fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-.equipier:nth-child(1) { grid-area: 2 / 2 / 3 / 3; }
-.equipier:nth-child(2) { grid-area: 2 / 4 / 3 / 5; }
-.equipier:nth-child(3) { grid-area: 4 / 2 / 5 / 3; }
-.equipier:nth-child(4) { grid-area: 4 / 4 / 5 / 5; } 
-
-body{
-  background-image: url('../images/foret.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  color:white;  
+main>h2{
+	text-align: center;
+	font-size: 300%;
 }
 
-.equipier{
-	border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-	width: 100%;
-	height: 100%;
-	background-color:rgba(0,0,0,.6);
-  color: white;
+h2{
+	margin:5px;
+}
+p{
+	margin:5px;
+}
+.col{
+
 	display: flex;
-	justify-content: center;
+	flex-flow: row wrap;
+	max-width:80vw;
 }
 
-.text>p>img{
-	float: left;
-	position: relative;
-	left: -5px;
-	top: -2px;
-	width: 42%;
-	min-width: 140px;
-	margin: 0px 5px 1px 0px;
-	max-height: 200px;
-	max-width: 100px;
+.article{
+	position:relative;
+	flex-flow: row wrap;
+	border: 6px solid white;
+	width:100%;
+	max-height:25vh;
+	margin:15px;
 }
 
-.text p{
-	margin: 2px 5px 2px 5px;	
+.article img{
+	float:left;
+	max-height:100%;
+	margin-right:10px;
 }
 
-@media only screen and (max-width: 700px)
-{
-	.equipe{
-		display: block;
+.article p{
+	text-align: justify;
+ 	text-justify: inter-word;
+}
+
+@media only screen and (max-width:700px){
+	.col{
+		max-width:100vw;
 	}
-	.equipier{
-		width: 66%;
-		margin: 10% auto;
+	.article{
+		max-height:100vh;
+		font-size: 80%;
+	}
+	.article img{
+		max-height: 50vh;
+		width: 84%;
+		margin: 10px 8%;
 	}
 }
-
 
 header
 {
