@@ -12,7 +12,13 @@
  
   /* Page Index */ 
 
-  #wrap:target, #menuburger:target
+  .faq body
+  {
+    max-width: 768px;
+    overflow: hidden;
+  }
+
+  #wrap:target, #flexburger:target
   {
     width: 90%;
   }
@@ -34,7 +40,7 @@
     top: 25vh;
   }
 
-  .header, header
+  .contact .header, .contact header
   {
     display: none;
   }
@@ -75,11 +81,27 @@
     margin-right: auto;
   }
 
+  .Nr header h1, .faq header h1, .equipe header h1
+  {
+    display: inherit;
+    color: white;
+    font-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
   .footer
   {
     display: inherit;
     height: 20vh;
     background-color: black;
+  }
+
+  .social-icon > img
+  {
+    filter: grayscale(0);
   }
 }
 
@@ -123,7 +145,7 @@
     height: 150vh;
   }
 
-  main > h2, .feuilles, header h4
+  .index main > h2, .feuilles, header h4
   {
     display: none;
   }
@@ -162,10 +184,24 @@
     font-size: 150%;
   }
 
-  #menuburger:target
+  #flexburger:target, #flexburger:target .menu
   {
-    width: 130%;
+    width: 100%;
   }
 
+  .faq footer
+  {
+    position: relative;
+  }
+
+  .Nr #open, .faq #open, .equipe #open
+  {
+    right: 62px;
+  }
+
+  .Nr #close, .faq #close, .equipe #close
+  {
+    right: 38px;
+  }
 
 }

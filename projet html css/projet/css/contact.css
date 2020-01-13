@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: "montserrat",sans-serif;
 }
 
 
@@ -192,17 +191,20 @@ header
 
 #flexburger:target .menu
 {
-  transform: skewX(-15deg);
+  transform: skewX(-10deg);
   transform-origin: top left;
 }
 
 
-#wrap:target .nav, #flexburger:target .nav{
+#wrap:target .nav{
   transform: skewX(15deg);
 }
 
+#flexburger:target .nav
+{
+  transform: skewX(10deg);
+}
 
-#open,
 #close {
   height: 44px;
   text-align: right;
